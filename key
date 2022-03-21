@@ -1,0 +1,8 @@
+#!/bin/bash
+while (true) 
+do
+xkbcomp /home/viao/.config/xkb/my $DISPLAY  
+ 
+ 
+ sleep 15; # пауза 5 секунд
+done;
