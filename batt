@@ -1,0 +1,15 @@
+#!/bin/bash
+while (true) 
+do
+STR=$(upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage")
+SUB='empty'
+if [[ "$STR" == *"$SUB"* ]]; then
+  echo $STR
+else
+ls -a
+fi
+ 
+
+ 
+ sleep 30; # пауза 5 секунд
+done;
